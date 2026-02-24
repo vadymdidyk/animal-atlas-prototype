@@ -1,0 +1,141 @@
+{
+  "jp": {
+    "root": {
+      "lang": "言語を選択してください",
+      "lang_opt01": "日本語",
+      "lang_opt02": "English",
+      "sound": "音をつけますか？",
+      "sound_opt01": "ON",
+      "sound_opt02": "OFF"
+    },
+    "idle": {
+      "btn": "見つけた動物"
+    },
+    "collection": {
+      "head_text": "見つけた動物",
+      "head_span": "種類",
+      "complete_text": "おめでとう！\nすべての動物が\n見つかりました。"
+    },
+    "camera": {
+      "modal_loading": "カメラ起動中",
+      "modal_horizontal_title": "画面を縦向きにして下さい。",
+      "modal_warning_title": "この動物は、\n記録済みです。",
+      "guide_marker_detected": "記録のチャンス！",
+      "guide_default": "動物を探そう",
+      "modal_error": "カメラを起動\nできませんでした。"
+    },
+    "goal": {
+      "title": "時間が切れました",
+      "text": "アプリを使っていただき、\nありがとうございます。\nもう一度プレーするには\nリロードして下さい。"
+    },
+    "lang_modal": {
+      "title": "言語を選択してください",
+      "opt01": "日本語",
+      "opt02": "English"
+    },
+    "warning_modal": {
+      "text": "あと1分で\n時間が切れます。"
+    },
+    "error_boundary": {
+      "text": "エラーが発生しました。"
+    },
+    "quiz": {
+      "question": "には何が入る？"
+    },
+
+    "cow": {
+      "CreatureID": "cow",
+      "label": "cow",
+      "name": "牛",
+      "description": "牛には4つの胃ぶくろが\nあります。草を何度も\n口にもどして噛むことで、\n固い草もしっかり\n消化できます。\nこれを「反すう」といいます。",
+      "quiz_answer_correct": "4つ",
+      "quiz_answer_wrong": "2つ"
+    },
+    "cat": {
+      "CreatureID": "cat",
+      "label": "cat",
+      "name": "猫",
+      "description": "猫は暗いところでも\n目がよく見えます。\n人間の約6倍も暗い場所で\nものを見ることができます。\nひげで周りの様子を\n感じ取ることもできます。",
+      "quiz_answer_correct": "6倍",
+      "quiz_answer_wrong": "2倍"
+    },
+    "dog": {
+      "CreatureID": "dog",
+      "label": "dog",
+      "name": "犬",
+      "description": "犬の鼻はとてもすごい！\n人間の約1万倍も\nにおいをかぎ分ける\nことができます。\nうれしい時にしっぽを\n振ってきもちを伝えます。",
+      "quiz_answer_correct": "1万倍",
+      "quiz_answer_wrong": "100倍"
+    }
+  },
+
+  "en": {
+    "root": {
+      "lang": "Please select a language",
+      "lang_opt01": "日本語",
+      "lang_opt02": "English",
+      "sound": "Enable sound?",
+      "sound_opt01": "ON",
+      "sound_opt02": "OFF"
+    },
+    "idle": {
+      "btn": "Discovered Animals"
+    },
+    "collection": {
+      "head_text": "Discovered Animals",
+      "head_span": "species",
+      "complete_text": "Congratulations!\nYou've found\nall the animals!"
+    },
+    "camera": {
+      "modal_loading": "Starting camera",
+      "modal_horizontal_title": "Please rotate your device\nto portrait mode.",
+      "modal_warning_title": "This animal has\nalready been discovered.",
+      "guide_marker_detected": "Chance to capture!",
+      "guide_default": "Find an animal",
+      "modal_error": "Could not start\nthe camera."
+    },
+    "goal": {
+      "title": "Time's up!",
+      "text": "Thank you for using the app.\nReload to play again."
+    },
+    "lang_modal": {
+      "title": "Please select a language",
+      "opt01": "日本語",
+      "opt02": "English"
+    },
+    "warning_modal": {
+      "text": "The app will stop working\nin 1 minute."
+    },
+    "error_boundary": {
+      "text": "Something went wrong."
+    },
+    "quiz": {
+      "question": " — what goes here?"
+    },
+
+    "cow": {
+      "CreatureID": "cow",
+      "label": "cow",
+      "name": "Cow",
+      "description": "Cows have four stomachs!\nThey chew their food\nmany times by bringing\nit back to their mouth.\nThis helps them digest\ntough grass. This is\ncalled \"rumination\".",
+      "quiz_answer_correct": "four",
+      "quiz_answer_wrong": "two"
+    },
+    "cat": {
+      "CreatureID": "cat",
+      "label": "cat",
+      "name": "Cat",
+      "description": "Cats can see well\neven in the dark.\nThey can see in places\nabout six times darker\nthan humans can.\nThey also use their\nwhiskers to sense\ntheir surroundings.",
+      "quiz_answer_correct": "six",
+      "quiz_answer_wrong": "two"
+    },
+    "dog": {
+      "CreatureID": "dog",
+      "label": "dog",
+      "name": "Dog",
+      "description": "Dogs have amazing noses!\nThey can detect smells\nabout ten thousand times\nbetter than humans.\nWhen they're happy,\nthey wag their tails\nto show how they feel.",
+      "quiz_answer_correct": "ten thousand",
+      "quiz_answer_wrong": "one hundred"
+    }
+  }
+}

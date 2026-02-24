@@ -1,0 +1,64 @@
+@use "sass:map";
+
+// Colors
+$colors: (
+  text: #000,
+  primary: #990D00,
+  bg: #F8F4F0
+);
+
+@function getColor($key: 'primary') {
+  @return map.get($colors, $key);
+}
+
+// Easings
+
+$easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
+$easeInOutCubic: cubic-bezier(0.65, 0, 0.35, 1);
+
+// Z-Indices
+
+$z-welcome-screen: 13;
+$z-transition-overlay: 12;
+$z-menu: 11;
+$z-header: 10;
+$z-info: 10;
+$z-map-overlay: 9;
+
+// Breakpoint mixins
+
+$xl: 1200px;
+$lg: 1024px;
+$md: 768px;
+$sm: 576px;
+$xs: 350px;
+
+@mixin xl {
+  @media screen and (max-width: $xl) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (max-width: $lg) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (max-width: $md) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (max-width: $sm) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media screen and (max-width: $xs) {
+    @content;
+  }
+}

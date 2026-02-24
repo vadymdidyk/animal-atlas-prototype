@@ -1,0 +1,156 @@
+@use "./vars";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overscroll-behavior-y: none;
+}
+
+body {
+  position: relative;
+  color: vars.getColor('text');
+  font-size: 14px;
+  font-family: "Sawarabi Gothic", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  line-height: 1.5;
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+img {
+  max-width: 100%;
+  // height: auto;
+  vertical-align: bottom;
+}
+
+ul {
+  list-style: none;
+  // margin: 0;
+  // padding: 0;
+}
+
+a {
+  // color: vars.getColor('text');
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  font-weight: 400;
+}
+
+figure {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.quiz-word {
+  position: relative;
+  display: inline;
+
+  span {
+    display: inline-block;
+    line-height: 1.5;
+    white-space: nowrap;
+    transition: opacity 350ms, visibility 350ms;
+
+    &:nth-child(2) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+}
+
+.quiz-word-revealed .quiz-word {
+  top: -3px;
+  span {
+    &:first-child {
+      opacity: 0;
+      visibility: hidden;
+    }
+    &:nth-child(2) {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.camera-glow {
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    filter: blur(30px);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: -1;
+    animation: cameraGlowPulse 2000ms ease-in-out infinite alternate;
+  }
+
+  &::before {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    background:
+      radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%),
+      radial-gradient(ellipse at 70% 60%, #a78bfa 0%, rgba(167, 139, 250, 0) 80%),
+      radial-gradient(ellipse at 30% 30%, #c084fc 0%, rgba(192, 132, 252, 0) 60%),
+      radial-gradient(ellipse at bottom left, #6366f1 0%, rgba(99, 102, 241, 0) 70%),
+      linear-gradient(135deg, rgba(45, 27, 105, 0) 0%, rgba(45, 27, 105, 0) 75%, #1a1035 100%),
+      linear-gradient(to right, #5b4dc7 0%, #f472b6 40%, #a78bfa 70%, #7c6bf0 100%);
+    background-blend-mode: screen, lighten, luminosity, overlay;
+  }
+
+  &::after {
+    width: 90%;
+    height: 90%;
+    max-width: 360px;
+    max-height: 360px;
+    background:
+      radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%),
+      radial-gradient(ellipse at 70% 60%, #a78bfa 0%, rgba(167, 139, 250, 0) 80%),
+      radial-gradient(ellipse at 30% 30%, #c084fc 0%, rgba(192, 132, 252, 0) 60%),
+      radial-gradient(ellipse at bottom left, #6366f1 0%, rgba(99, 102, 241, 0) 70%),
+      linear-gradient(135deg, rgba(45, 27, 105, 0) 0%, rgba(45, 27, 105, 0) 75%, #1a1035 100%),
+      linear-gradient(to right, #5b4dc7 0%, #f472b6 40%, #a78bfa 70%, #7c6bf0 100%);
+    background-blend-mode: overlay, luminosity, color-dodge, saturation, screen, color;
+  }
+}
+
+@keyframes cameraGlowPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.85);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.frame-blink {
+  animation: frameBlink 1000ms linear infinite forwards;
+}
+
+@keyframes frameBlink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
