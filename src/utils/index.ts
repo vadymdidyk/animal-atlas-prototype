@@ -34,8 +34,8 @@ export const padNumber = (num: number | null | undefined): string => {
 /*
   Converts minutes to seconds
 */
-export const minToSec = (val: number): number | false => {
-  return Number.isInteger(val) && val * 60
+export const minToSec = (val: number): number => {
+  return val * 60
 }
 
 export const minToMs = (val: number): number => {

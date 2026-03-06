@@ -7,11 +7,6 @@ describe('minToSec', () => {
     expect(minToSec(5)).toBe(300)
     expect(minToSec(0)).toBe(0)
   })
-
-  it('returns false for non-integer values', () => {
-    expect(minToSec(1.5)).toBe(false)
-    expect(minToSec(0.1)).toBe(false)
-  })
 })
 
 describe('minToMs', () => {
