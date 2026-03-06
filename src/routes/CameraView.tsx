@@ -48,7 +48,7 @@ export default function CameraView() {
     const detect = async () => {
       const net = modelRef.current
       if (!videoRef.current || !net) return
-      console.log('3. Detection loop running...')
+
       setIsModelCached(true)
       setIsLoadOver(true)
 

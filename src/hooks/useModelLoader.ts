@@ -12,18 +12,18 @@ async function loadModel(): Promise<cocossd.ObjectDetection> {
     if ('indexedDB' in window) {
       for (const modelUrl of Object.keys(localModels)) {
         if (!modelUrl.includes(modelName)) {
-          console.log('Removing unused models')
+          // Removing unused models
           await tf.io.removeModel(modelUrl)
         }
       }
     }
 
     if ('indexedDB' in window && idbModelUrl in localModels) {
-      console.log('Loading model from indexedDB')
+      // Loading model from indexedDB
       return await cocossd.load({ modelUrl: idbModelUrl })
     }
     else {
-      console.log('Loading model from server')
+      // Loading model from server
       const model = await cocossd.load()
 
       // Save model locally
@@ -53,7 +53,7 @@ export function useModelLoader() {
           return
         }
         modelRef.current = model
-        console.log('2. Model loaded')
+        // Model loaded
         setModelReady(true)
       })
       .catch(error => {
@@ -68,7 +68,6 @@ export function useModelLoader() {
         if (modelRef.current) {
           modelRef.current.dispose()
           modelRef.current = null
-          console.log('4. Model disposed')
         }
       }, 1000)
     }

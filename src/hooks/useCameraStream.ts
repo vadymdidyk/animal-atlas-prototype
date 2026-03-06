@@ -1,11 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 
-declare global {
-  interface Window {
-    stream: MediaStream | null
-  }
-}
-
 export function useCameraStream() {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [videoSize, setVideoSize] = useState({ x: 390, y: 844 })
@@ -17,8 +11,7 @@ export function useCameraStream() {
     let currentStream: MediaStream | null = null
 
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      console.log('0. Camera stream available')
-
+      // Camera stream available
       navigator.mediaDevices
         .getUserMedia({
           audio: false,
@@ -26,7 +19,6 @@ export function useCameraStream() {
         })
         .then(stream => {
           currentStream = stream
-          window.stream = stream
 
           if (!videoRef.current) return
           videoRef.current.srcObject = stream
@@ -35,7 +27,7 @@ export function useCameraStream() {
             if (!videoRef.current) return resolve()
 
             videoRef.current.onloadedmetadata = () => {
-              console.log('1. Camera stream loaded')
+              // Camera stream loaded
               setStreamReady(true)
               resolve()
             }
@@ -52,7 +44,6 @@ export function useCameraStream() {
         const tracks = currentStream.getTracks()
         tracks.forEach(track => track.stop())
         currentStream = null
-        window.stream = null
       }
     }
   }, [])
