@@ -1,6 +1,12 @@
 # Animal Atlas
 
-An interactive museum companion app prototype that lets users discover and collect animals using their device's camera. Point the camera at exhibit markers to identify animals, build a personal collection, and test your knowledge with quizzes. As a prototype, the app uses the pre-trained TensorFlow.js COCO-SSD model. For simplicity, it currently supports the detection of only three animals: cat, dog, and cow. Sample images for testing are available in the `sample_images/` folder.
+An interactive museum companion app prototype that lets users discover and collect animals using their device's camera. Point the camera at exhibit markers to identify animals, build a personal collection, and test your knowledge with quizzes. As a prototype, the app uses the pre-trained TensorFlow.js COCO-SSD model. For simplicity, it currently supports the detection of only three animals: cat, dog, and cow.
+
+## Live Demo
+
+Scan the QR code to try the app on your device. Sample images for testing are available in the `sample_images/` folder.
+
+![QR Code](qr.png)
 
 ## Features
 
